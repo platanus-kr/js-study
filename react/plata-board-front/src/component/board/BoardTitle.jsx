@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const BoardTitle = ({ boardInfo }) => {
   if (!boardInfo || boardInfo === {}) return <h1>Title is Loading...</h1>;
   return (

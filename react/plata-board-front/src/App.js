@@ -2,9 +2,11 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./component/page/HomePage";
 import BoardPage from "./component/page/BoardPage";
+import { RecoilRoot } from "recoil";
 
 function App() {
   return (
+	<RecoilRoot>
 	<BrowserRouter>
 	  <HomePage />
       <Routes>
@@ -13,6 +15,7 @@ function App() {
         <Route path="/board/:asdf" element={<BoardPage />} />
       </Routes>
 	</BrowserRouter>
+	</RecoilRoot>
   );
 }
 

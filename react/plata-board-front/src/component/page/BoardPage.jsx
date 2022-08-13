@@ -4,8 +4,13 @@ import BoardTitle from "../board/BoardTitle";
 import Articles from "../board/Articles";
 import Pagenation from "../utils/Pagenation";
 import { useLocation, useParams } from "react-router-dom";
+import {useRecoilValue, useSetRecoilState} from "recoil";
+//import { testState } from "../atom/testState";
+import testState from "../atom/testState";
 
 const BoardPage = () => {
+  const test = useRecoilValue(testState);
+  const setTest = useSetRecoilState(testState);
   const [boardInfo, setBoardInfo] = useState(null);
   const [articlesInfo, setArticlesInfo] = useState(null);
   const [boardPageNum, setBoardPageNum] = useState(1);
@@ -39,6 +44,8 @@ const BoardPage = () => {
     console.log(match);
     console.log(location);
   }, [match, location]);
+
+  console.log(test);
 
   return (
     <>
