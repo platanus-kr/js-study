@@ -6,6 +6,7 @@ import Pagenation from "../utils/Pagenation";
 import { useLocation, useParams } from "react-router-dom";
 import {useRecoilValue, useSetRecoilState} from "recoil";
 //import { testState } from "../atom/testState";
+import Button from '@mui/material/Button';
 import testState from "../atom/testState";
 
 const BoardPage = () => {
@@ -52,6 +53,7 @@ const BoardPage = () => {
       <BoardTitle boardInfo={boardInfo} />
       <Pagenation selectedPage={boardPageNum} setPage={setBoardPageNum} />
       <Articles articlesInfo={articlesInfo} />
+	  <Button variant="contained">Hello World</Button>
     </>
   );
 };
